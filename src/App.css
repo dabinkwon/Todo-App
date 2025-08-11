@@ -1,42 +1,76 @@
+body, html {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
 #root {
-  max-width: 1280px;
+  max-width: 1250px;
   margin: 0 auto;
   padding: 2rem;
+  font-size: 14px;
+  height: 100%;
+}
+h1 {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.508);
   text-align: center;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.todo-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+  /* position: relative;
+  left: 30px; */
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.todo-input-text {
+  width: 200px;
+  height: 100%;
+  /* padding: 0 8px; */
+  text-align: center;
+  border: 1px solid rgba(128, 128, 128, 0.53);
+  margin-right: 2px;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.todo-input-btn {
+  width: 80px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 12px;
+  margin: 0;
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: 3px;
 }
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.modify-btn, .delete-btn, .modify-completed-btn, .todo-input-btn {
+  background-color: rgba(176, 241, 176, 0.5);
+  border-radius: 4px;
+  margin: 0 3px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.todoList {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0;
 }
-
-.card {
-  padding: 2em;
+.todo {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 30px;
 }
-
-.read-the-docs {
-  color: #888;
+.todo-item{
+  border: 1px solid rgba(128, 128, 128, 0.551);
+  min-width: 120px;
+  padding-left: 4px;
+  min-height: 23px;
+  margin-right: 2px;
+}
+.input-checkbox{
+  cursor: pointer;
+  margin-right: 7px;
 }
